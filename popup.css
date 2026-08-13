@@ -1,0 +1,210 @@
+:root {
+  --bg: #eef1f4;
+  --surface: #ffffff;
+  --surface-2: #e3e7ec;
+  --ink: #1b2430;
+  --ink-muted: #5b6675;
+  --line: #d3d9e0;
+  --accent: #d98a12;
+  --accent-strong: #a8660a;
+  --accent-bg: #fbead0;
+  --accent-bg-strong: #f6d99a;
+  --err-bg: #fbe2e2;
+  --err-ink: #a3312c;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #11151b;
+    --surface: #181e26;
+    --surface-2: #212933;
+    --ink: #e7ecf2;
+    --ink-muted: #97a3b1;
+    --line: #2b3542;
+    --accent: #f0ab3e;
+    --accent-strong: #f6c876;
+    --accent-bg: #3a2c14;
+    --accent-bg-strong: #4d3a17;
+    --err-bg: #3a1f1e;
+    --err-ink: #e5928e;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  width: 320px;
+  margin: 0;
+  padding: 14px 16px 16px;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding-bottom: 12px;
+  margin-bottom: 12px;
+  border-bottom: 1px solid var(--line);
+}
+
+header img {
+  border-radius: 7px;
+  flex-shrink: 0;
+}
+
+.titles h1 {
+  font-size: 13.5px;
+  font-weight: 600;
+  margin: 0;
+  letter-spacing: -0.01em;
+}
+
+.subtitle {
+  margin: 1px 0 0;
+  font-size: 11px;
+  color: var(--ink-muted);
+}
+
+main {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 14px;
+  box-shadow: 0 1px 2px rgba(20, 20, 20, 0.04);
+}
+
+.state {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.hidden {
+  display: none;
+}
+
+#state-loading {
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+  color: var(--ink-muted);
+  font-size: 12.5px;
+}
+
+.waiting-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0 0 6px;
+  font-weight: 600;
+  font-size: 12.5px;
+}
+
+.hint {
+  margin: 0;
+  font-size: 11.5px;
+  color: var(--ink-muted);
+}
+
+.spinner {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 2px solid var(--accent-bg-strong);
+  border-top-color: var(--accent);
+  animation: spin 0.8s linear infinite;
+  flex-shrink: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .spinner {
+    animation: none;
+  }
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+label {
+  display: block;
+  font-family: ui-monospace, "SF Mono", Consolas, monospace;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--ink-muted);
+  margin-bottom: 6px;
+}
+
+input#pdf-url {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 8px 9px;
+  font-family: ui-monospace, "SF Mono", Consolas, monospace;
+  font-size: 11px;
+  color: var(--accent-strong);
+  background: var(--accent-bg);
+  border: 1px solid var(--accent-bg-strong);
+  border-radius: 6px;
+  margin-bottom: 10px;
+}
+
+input#pdf-url:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 1px;
+}
+
+.actions {
+  display: flex;
+  gap: 8px;
+}
+
+button {
+  flex: 1;
+  padding: 7px 8px;
+  font-size: 12px;
+  font-family: inherit;
+  font-weight: 600;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: filter 0.15s ease;
+}
+
+button:hover {
+  filter: brightness(1.05);
+}
+
+button:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 1px;
+}
+
+.btn-secondary {
+  background: var(--surface-2);
+  color: var(--ink);
+  border: 1px solid var(--line);
+}
+
+.btn-primary {
+  background: var(--accent);
+  color: #1b1300;
+  border: 1px solid var(--accent);
+}
+
+#state-wrong-site p {
+  margin: 0;
+  color: var(--err-ink);
+  background: var(--err-bg);
+  padding: 8px 10px;
+  border-radius: 6px;
+  font-size: 12px;
+}

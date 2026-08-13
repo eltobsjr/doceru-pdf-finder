@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8" />
+    <title>Doceru PDF Finder</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <header>
+      <img src="icons/icon32.png" width="28" height="28" alt="" />
+      <div class="titles">
+        <h1>Doceru PDF Finder</h1>
+        <p class="subtitle">extrator de link do PDF</p>
+      </div>
+    </header>
+
+    <main>
+      <div id="state-loading" class="state">
+        <span class="spinner" aria-hidden="true"></span>
+        Procurando PDF na página...
+      </div>
+
+      <div id="state-waiting" class="state hidden">
+        <p class="waiting-title">
+          <span class="spinner" aria-hidden="true"></span>
+          PDF ainda não carregou
+        </p>
+        <p class="hint">
+          Clique na verificação de robô da página e aguarde o preview do PDF
+          aparecer. Isto aqui atualiza sozinho a cada 1,5s.
+        </p>
+      </div>
+
+      <div id="state-found" class="state hidden">
+        <label for="pdf-url">URL do PDF</label>
+        <input id="pdf-url" type="text" readonly />
+        <div class="actions">
+          <button id="btn-copy" class="btn-secondary">Copiar link</button>
+          <button id="btn-open" class="btn-primary">Abrir PDF</button>
+        </div>
+      </div>
+
+      <div id="state-wrong-site" class="state hidden">
+        <p>Abra uma página do <strong>doceru.com</strong> para usar a extensão.</p>
+      </div>
+    </main>
+
+    <script src="popup.js"></script>
+  </body>
+</html>
