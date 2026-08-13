@@ -43,32 +43,57 @@ descompacte a pasta em qualquer lugar do computador.
 
 ### 2. Carregue no navegador
 
-| Navegador | Endereço para colar na barra |
-|---|---|
-| Chrome | `chrome://extensions` |
-| Edge | `edge://extensions` |
-| Brave | `brave://extensions` |
-| Opera | `opera://extensions` |
+Os passos são praticamente iguais em qualquer navegador baseado em Chromium
+e em qualquer sistema (Windows, macOS ou Linux) — o que muda é só o endereço
+da página de extensões. Escolha o seu abaixo.
 
-Passos (iguais em Windows, macOS e Linux):
+#### Google Chrome
 
-1. Cole o endereço do navegador acima e aperte Enter.
-2. Ative **Modo do desenvolvedor** (canto superior direito da página).
-3. Clique em **Carregar sem compactação** (*Load unpacked*).
+1. Abra `chrome://extensions` na barra de endereço.
+2. Ative **Modo do desenvolvedor** no canto superior direito.
+3. Clique em **Carregar sem compactação**.
 4. Selecione a pasta `doceru-pdf-finder` que você baixou/clonou.
-5. O ícone da extensão aparece na barra de ferramentas — pode fixá-lo
-   clicando no ícone de peça de quebra-cabeça 🧩 ao lado da barra de endereço.
+5. Fixe o ícone da extensão clicando na peça de quebra-cabeça 🧩 ao lado da
+   barra de endereço e depois no alfinete 📌 ao lado do "Doceru PDF Finder".
 
-Pronto — a extensão fica instalada localmente nesse navegador. Como não veio
-da Chrome Web Store, o navegador não atualiza ela sozinha: para atualizar, dê
-`git pull` (ou baixe o ZIP de novo) e clique em **Atualizar/Reload** na página
-`chrome://extensions`.
+#### Opera (e Opera GX)
 
-### No Mac, especificamente
+1. Abra `opera://extensions` na barra de endereço (ou menu **Opera → Extensões
+   → Gerenciar extensões**).
+2. Ative **Modo desenvolvedor** no canto superior direito.
+3. Clique em **Carregar extensão descompactada**.
+4. Selecione a pasta `doceru-pdf-finder`.
+5. O ícone aparece na barra lateral/barra de ferramentas de extensões do
+   Opera — clique no ícone de extensões para fixá-lo se não aparecer direto.
 
-Mesmo passo a passo acima, no Chrome do macOS: `chrome://extensions` →
-ativar **Modo do desenvolvedor** → **Carregar sem compactação** → selecionar a
-pasta. Não precisa de nenhuma permissão especial do macOS para isso.
+#### Microsoft Edge
+
+1. Abra `edge://extensions` na barra de endereço.
+2. Ative **Modo de desenvolvedor** no menu à esquerda (ou canto inferior
+   esquerdo, dependendo da versão).
+3. Clique em **Carregar sem compactação**.
+4. Selecione a pasta `doceru-pdf-finder`.
+5. Fixe o ícone clicando no "..." ou na peça de quebra-cabeça na barra de
+   endereço e depois no alfinete ao lado da extensão.
+
+#### Brave
+
+1. Abra `brave://extensions` na barra de endereço.
+2. Ative **Modo desenvolvedor** no canto superior direito.
+3. Clique em **Carregar sem compactação**.
+4. Selecione a pasta `doceru-pdf-finder`.
+5. Fixe o ícone clicando na peça de quebra-cabeça 🧩 na barra de endereço e no
+   alfinete 📌 ao lado da extensão.
+
+Pronto — em qualquer um desses navegadores a extensão fica instalada
+localmente. Como não veio de uma loja oficial, o navegador não atualiza ela
+sozinho: para atualizar, dê `git pull` (ou baixe o ZIP de novo) e clique no
+botão de **Atualizar/Reload** (ícone de setinha circular) do card da extensão
+na página de extensões.
+
+> Esses passos valem tanto pra Windows quanto macOS e Linux — a interface é a
+> mesma nos três, só muda o menu de arquivos que abre na hora de selecionar a
+> pasta.
 
 ### Celular / tablet
 
